@@ -1,0 +1,99 @@
+
+body {
+	color:#000;
+  min-height: 75rem;
+  widows: 3;
+  font-family: 'Lato', sans-serif;
+
+
+}
+h1,h2,h3,h4 {color:#074f60;}
+
+h1 {font-size: 3rem; color:#074f60; font-weight:700;}
+h2 {color:#074f60; font-weight:700;}
+h3 {color:#074f60; font-weight:700;}
+h4 {font-size:1.5rem; font-weight:700;}
+
+p {font-size: 1.1rem; line-height: 1.5em; font-weight: 300; }
+
+
+header { padding: 126px 0 50px; overflow: hidden;}
+
+section {
+  padding: 150px 0;
+}
+.bg-black {background: #000;}
+.bg-green {background:#51c89e;}
+.bg-teal {background:#00a99d;}
+
+.bg-grey-light {background: #eee;}
+.bg-blue-dark {background:#074f60; color:#fff;}
+.bg-blue-dark h4 {color:#fff;}
+.bg-blue-light {background: #e7f1fb;}
+
+.text-blue-dark {color:#02617f;}
+.text-black {color:#000;}
+
+.text-shadow { text-shadow: 1px 2px #000;}
+
+.border-thick {border: #fff solid 10px !important;}
+
+.btn, .btn:hover, .btn:active {background:#00a99d; border:1px solid #00a99d; color:#fff;}
+.btn-lg {border-radius: 100px; padding: 8px 36px; 
+  font-size: 18px; font-weight: 700;}
+
+
+.px-9 {padding: 0 4rem;}
+
+.feature-box {min-height: 500px;}
+
+.navbar {padding:20px 20px;}
+
+.navbar-brand {margin-left:-10px;}
+
+.navbar-nav {font-size: 1.2rem;}
+.navbar-nav a {color:#02617f !important; font-weight: 600;}
+.nav-link.active {color:#000 !important;}
+
+.features-intro {text-align: center; padding: 0px 50px 50px;}
+
+.benefits img {max-width: 90px; float:right;} 
+
+@media (max-width: 992px) {
+  .row {margin: 0 !important;}
+  #about {padding-right: 0 !important; padding-left: 0 !important;}
+.feature-box {min-height:550px; padding:20px !important;}
+
+  #about img {width: 90% !important; position: absolute;
+
+  bottom: 0;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;}
+}
+
+
+@media (min-width: 992px) {
+.navbar-expand-lg .navbar-nav .nav-link {padding-left: 0.9rem; padding-right: 0.9rem; }
+.features-intro {text-align: left; }
+}
+
+.container {max-width: 1280px;}
+
+.hero {background:#e3f4fc; min-height: 550px; margin-bottom: 0; text-align: left;}
+
+.hero h1 {font-size: 3rem; margin-top: 50px; } 
+
+.hero p {font-size: 1.5rem; font-weight: normal; padding-bottom: 20px;}
+
+@media (max-width: 992px) {
+  .hero {min-height: 550px; margin-bottom: 0; text-align: center !important;}
+  .hero h1 {font-size: 2.6rem; margin-top: 20px; } 
+  .hero p {font-size: 1.1rem; }}
+
+
+  @media (max-width: 450px) {.hero img {margin-left:-20%;}
+
+
+.feature-box {max-height: 640px; overflow: hidden}
+
