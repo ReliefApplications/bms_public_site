@@ -1,7 +1,3 @@
-language: node_js
-node_js:
-  - "9"
-
 # Define environment variables
 env:
   - secure: "stMKPVRThfcQJfLYz9y5eTxou6Zu9PVxpsatzzEZiOTIhkkAm6BWgkIFmf9LGy6A8iIbQZIWZqbtNhzOMi0of2Hg2/Zh+nOfnbwBtdRen5QmpGSFpOJRtCsekXlnRgCEJnHmitbZe+8TMIqpYg1yPcmHxZDj+tUsKo0VM2HqIbBWLxRORX+Q5momb8WHlynWF3/71ID5so0H1oApkJKeUQRCkOxwZkHibeYVKieH4vIC9AAouNupYLCx7151gjm6FWisDKj8s4+Y07OzJSJPhYpnLapZA0CdB0ldIHtzxtxaA72kXjyY/k8IOEQPqK6A2diEksMaAxI/9Htbn8HkSsMOmS7DqHvRvQ93znlQN09dqTBVcEyEjni4Yk1yKae26/OZXGdE5SX1uwf8EzTpAxNPkY9jueD8HpXol2H3PEfDY3JdZOpsa8pidS/rOxL4ddizjo3OD2q2ECy6JZoscM4BbJtYubnR8gAGdi/l7ZRM9MnT2MOfmOyBnGv3xfiGYZQu2bXtm+2KihB5tjHZiAlbZD/ryrD4Cxz1e5yroEhHm1YaVs8gOZ978fkTnyrDxmWLJL6PZGg/Yip7VUdyVevpl5RHSPkMzChTt37JhvZBAdL1eu8zYtoFYeBwd3sWR+cG3PjSa/XBFc4VMNh8rhklUZNCppJkMGpAHqD5emw="
@@ -11,11 +7,6 @@ before_install:
     - sshpass -V
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
-    - echo "$SERVER_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
-    - chmod 644 ~/.ssh/known_hosts
 
 install:
   - npm install -g @angular/cli
