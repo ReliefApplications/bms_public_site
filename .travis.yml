@@ -7,7 +7,8 @@ before_install:
     - sshpass -V
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
-    - ssh-add - > /dev/null
+    - man ssh-add > man_ssh-add && cat man_ssh-add
+    - echo "${SERVER_KEY}" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan travis-ci.org >> ~/.ssh/known_hosts
