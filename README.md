@@ -11,6 +11,6 @@ If you're an experienced dev and you'd like to get involved, contact us on Twitt
 
 The global project documentation is available on the frontend [repository](https://github.com/ReliefApplications/bms_front).
 
-## Development
+## Branch management
 
-Build with Bootstrap.
+All code changes should be made on the dev branch before being merge to master
