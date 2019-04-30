@@ -11,8 +11,10 @@ before_deploy:
 - chmod 600 /tmp/deploy_rsa
 - ssh-add /tmp/deploy_rsa
 
-jobs:
-  include:
-  - stage: deploy
-    if: branch = master AND NOT type = "pull_request"
-    script: rsync -r --delete-after . tester@217.70.189.97:/var/www/html/bms_public_site
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: rsync -r --delete-after . tester@217.70.189.97:/var/www/html/bms_public_site
+  on:
+    branch: master
+    condition: $TRAVIS_PULL_REQUEST = false
